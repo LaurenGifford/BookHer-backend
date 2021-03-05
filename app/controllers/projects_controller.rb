@@ -11,7 +11,8 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        project = Project.create(date: params[:date], title: params[:title], city: params[:city], budget: params[:budget], casting_director: params[:casting_director])
+        byebug
+        project = Project.create(date: params[:date], title: params[:title], city: params[:city], budget: params[:budget], agency: params[:agency], casting_director: params[:casting_director])
         render json: project
     end
 end

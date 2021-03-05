@@ -5,8 +5,12 @@ Rails.application.routes.draw do
 
   get '/projects/:id', to: 'projects#show', as: 'project'
   get '/projects', to: 'projects#index', as: 'projects'
+  post '/projects', to: 'projects#create'
+
 
   get '/casting_directors/:id', to: 'casting_directors#show'
+
+  get '/questions', to: 'questions#index'
   # resources :questions
   # resources :questionnaires
   # resources :jobs
