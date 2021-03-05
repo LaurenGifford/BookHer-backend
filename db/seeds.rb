@@ -60,8 +60,8 @@ Model.create(name: "Yoon Young Bae", image: "https://i.mdel.net/i/db/2020/10/140
 
 director1 = CastingDirector.create(name: "Jack")
 
-project1 = Project.create(date: Date.today-rand(10000), title: "picture time", budget: 20000, city: "New York", casting_director: director1, agency: "Ford")
-project2 = Project.create(date: Date.today-rand(10000), title: "fashion", budget: 30000, city: "LA", casting_director: director1, agency: "Elite")
+project1 = Project.create(date: "September 9th 2012", title: "picture time", budget: 20000, city: "New York", casting_director: director1, agency: "Ford")
+project2 = Project.create(date: "February 12th 2044", title: "fashion", budget: 30000, city: "LA", casting_director: director1, agency: "Elite")
 
 
 Job.create(model: Model.first, project: project1)

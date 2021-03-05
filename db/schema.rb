@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 6) do
     t.string "city"
     t.integer "budget"
     t.bigint "casting_director_id", null: false
-    t.datetime "date"
+    t.string "date"
     t.string "agency"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
