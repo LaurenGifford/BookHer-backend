@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_04_233155) do
+ActiveRecord::Schema.define(version: 6) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_03_04_233155) do
     t.integer "budget"
     t.bigint "casting_director_id", null: false
     t.datetime "date"
+    t.string "agency"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["casting_director_id"], name: "index_projects_on_casting_director_id"
@@ -58,16 +59,24 @@ ActiveRecord::Schema.define(version: 2021_03_04_233155) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.bigint "project_id", null: false
-    t.text "text"
-    t.boolean "pop_up"
-    t.string "model_attr"
+    t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["project_id"], name: "index_questionnaires_on_project_id"
+    t.index ["question_id"], name: "index_questionnaires_on_question_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "text"
+    t.string "model_attr"
+    t.boolean "pop_up"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "jobs", "models"
   add_foreign_key "jobs", "projects"
   add_foreign_key "projects", "casting_directors"
   add_foreign_key "questionnaires", "projects"
+  add_foreign_key "questionnaires", "questions"
 end
