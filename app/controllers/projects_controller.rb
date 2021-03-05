@@ -11,7 +11,13 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        project = Project.create(date: params[:date], title: params[:title], city: params[:city], budget: params[:budget], casting_director: params[:casting_director])
+        project = Project.create(date: params[:date], title: params[:title], city: params[:city], budget: params[:budget], casting_director_id: params[:casting_director_id], agency: params[:agency])
         render json: project
+    end
+
+    def destroy 
+        project = Project.find(params[:id])
+        project.jobs.each(&:destroy)
+        project.destroy 
     end
 end
