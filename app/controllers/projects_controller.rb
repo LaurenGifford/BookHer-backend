@@ -18,6 +18,7 @@ class ProjectsController < ApplicationController
     def destroy 
         project = Project.find(params[:id])
         project.jobs.each(&:destroy)
+        project.questionnaires.each(&:destroy)
         project.destroy 
     end
 end
