@@ -15,6 +15,13 @@ class ProjectsController < ApplicationController
         render json: project
     end
 
+    def update
+        # byebug
+        project = Project.find(params[:id])
+        project.update(budget: params[:budget])
+        render json: project
+    end
+
     def destroy 
         project = Project.find(params[:id])
         project.jobs.each(&:destroy)

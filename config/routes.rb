@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get '/projects/:id', to: 'projects#show', as: 'project'
   delete '/projects/:id', to: 'projects#destroy'
+  patch '/projects/:id', to: 'projects#update'
   get '/projects', to: 'projects#index', as: 'projects'
   post '/projects', to: 'projects#create'
 
