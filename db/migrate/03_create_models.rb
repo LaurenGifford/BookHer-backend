@@ -3,6 +3,7 @@ class CreateModels < ActiveRecord::Migration[6.1]
     create_table :models do |t|
       t.string :name
       t.string :age
+      t.string :agency
       t.string :image
       t.integer :ranking
       t.integer :shows_walked

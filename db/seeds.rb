@@ -71,12 +71,20 @@ Job.create(model: Model.second, project: project2)
 
 q1 = Question.create(text: "What is your desired minimum age?", model_attr: "age", pop_up: false)
 q2 = Question.create(text: "What is the height minimum?", model_attr: "height", pop_up: false)
-q3 = Question.create(text: "What is the minimun amount of shows they have walked?", model_attr: "shows_walked", pop_up: false)
+q3 = Question.create(text: "What is the minimum amount of shows they have walked?", model_attr: "shows_walked", pop_up: false)
 q4 = Question.create(text: "What is your fee limit on a model?", model_attr: "fee", pop_up: false)
 q5 = Question.create(text: "How many instagram followers should she have?", model_attr: "insta_followers", pop_up: false)
 q6 = Question.create(text: "Are you willing to fly models in?", model_attr: "city", pop_up: false)
-q7 = Question.create(text: "Do you hate any agencies?", model_attr: "agency", pop_up: false)
-q8 = Question.create(text: "Enter model special skills?", model_attr: "special_skills", pop_up: false)
+q7 = Question.create(text: "Enter model special skills?", model_attr: "special skills", pop_up: false)
+
+q8 = Question.create(text: "The model you selected just had a nervous breakdown and flew home! Pay for her to fly back or fire her?", pop_up: true)
+q9 = Question.create(text: "One of the models you chose is under 18 so she can only work an 8 hour day, do you want to keep or fire her?", pop_up: true)
+q10 = Question.create(text: "The agent monster just had one of the girls you selected chopped off all her hair! Buy her a wig or fire her?", pop_up: true)
+q11 = Question.create(text: "The model fell off her vespa in Milan! Pay for her custom cast or fire her?", pop_up: true)
+q12 = Question.create(text: "The model’s visa was not approved! Sneak her into the country or fire her?", pop_up: true)
+
+
+
 
 Questionnaire.create(project_id: project1.id, question_id: q1.id)
 Questionnaire.create(project_id: project1.id, question_id: q2.id)
@@ -85,7 +93,13 @@ Questionnaire.create(project_id: project1.id, question_id: q4.id)
 Questionnaire.create(project_id: project1.id, question_id: q5.id)
 Questionnaire.create(project_id: project1.id, question_id: q6.id)
 Questionnaire.create(project_id: project1.id, question_id: q7.id)
+
 Questionnaire.create(project_id: project1.id, question_id: q8.id)
+Questionnaire.create(project_id: project1.id, question_id: q9.id)
+Questionnaire.create(project_id: project1.id, question_id: q10.id)
+Questionnaire.create(project_id: project1.id, question_id: q11.id)
+Questionnaire.create(project_id: project1.id, question_id: q12.id)
+
 
 
 puts 'seeded 🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱seeded'

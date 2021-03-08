@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 6) do
   create_table "models", force: :cascade do |t|
     t.string "name"
     t.string "age"
+    t.string "agency"
     t.string "image"
     t.integer "ranking"
     t.integer "shows_walked"
