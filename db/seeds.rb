@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Model.destroy_all
+CastingDirector.destroy_all
+Job.destroy_all
+Project.destroy_all
+Question.destroy_all
+Questionnaire.destroy_all
 
 Model.create(name: "Abby Champion", image: "https://i.pinimg.com/originals/70/f7/f8/70f7f891dcfdcae3036db63c0c6429ae.jpg", agency: "Next", age: 22, city: "Los Angeles", ranking: 1, shows_walked: 96, height: 180, special_skills: "improv", fee: 10000, insta_followers: 343000)
 Model.create(name: "Achenrin Madit", image: "https://i.mdel.net/i/db/2021/1/1451324/1451324-500w.jpg", agency: "The Industry", age: 18, city: "New York", ranking: 2, shows_walked: 84, height: 175, special_skills: "improv", fee: 10000, insta_followers: 6000)
