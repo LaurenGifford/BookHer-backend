@@ -64,7 +64,7 @@ Model.create(name: "Signe Veiteberg", image: "https://i.mdel.net/i/db/2020/2/129
 Model.create(name: "Yoon Young Bae", image: "https://i.mdel.net/i/db/2020/10/1409329/1409329-500w.jpg", agency: "DNA", age: 17, city: "Paris", ranking: 50, shows_walked: 22, height: 172, special_skills: "archery", fee: 1000, insta_followers: 7000)
 
 
-director1 = CastingDirector.create(name: "Jack")
+director1 = CastingDirector.create(name: "Jack", password: "1234")
 
 project1 = Project.create(date: "September 9th 2012", title: "picture time", budget: 20000, city: "New York", casting_director: director1, agency: "Ford")
 project2 = Project.create(date: "February 12th 2044", title: "fashion", budget: 30000, city: "LA", casting_director: director1, agency: "Elite")
