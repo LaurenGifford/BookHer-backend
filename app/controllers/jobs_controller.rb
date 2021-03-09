@@ -14,4 +14,9 @@ class JobsController < ApplicationController
         job = Job.create(model_id: params[:model_id], project_id: params[:project_id])
         render json: job
     end
+
+    def destroy
+        job = Job.find(params[:id])
+        job.destroy
+    end
 end
