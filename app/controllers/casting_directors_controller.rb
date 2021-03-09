@@ -19,7 +19,7 @@ class CastingDirectorsController < ApplicationController
         casting_director = CastingDirector.find_by(name: params[:name])
 
         if casting_director && casting_director.authenticate(params[:password])
-          token = JWT.encode({ casting_director_id: casting_director.id }, 'my_secret', 'HS256')
+          token = JWT.encode({ casting_director_id: casting_director.id }, '=$47X`:pg{_nvFU', 'HS256')
           render json: { casting_director: CastingDirectorSerializer.new(casting_director), token: token }
         else
           render json: { errors: ["Invalid username or password"] }, status: :unauthorized

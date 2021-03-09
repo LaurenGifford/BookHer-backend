@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/models/:id', to:'models#show'
   get '/models', to:'models#index', as: 'models'
   
-  get '/me', to: 'casting_directors#show'
+  get '/casting_directors/:id', to: 'casting_directors#show'
   get '/casting_directors', to:'casting_directors#index'
   post "/signup", to: "casting_directors#signup"
   post "/login", to: "casting_directors#login"
